@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;500;700&display=swap');
 
 * {
-    padding: 0;
-    margin: 0;
+    /* padding: 0;
+    margin: 0; */
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
@@ -16,31 +16,15 @@ gris
 
 */
 
-
-
 /* BODY */
-
-
-#contenedorindex {
-
-    width: 1300px;
-    background-image: url(/imagenes/fondoindex.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 0 auto;
-
-
-}
 
 /* HEADER */
 header {
     background: #1C3661;
-    /* height: 10rem; */
 }
 
 h1 {
-    background-image: url(/imagenes/logoh1.jpg);
+    background-image: url(../imagenes/logoh1.png);
     background-size: auto;
     background-position: center;
     width: 25%;
@@ -50,43 +34,25 @@ h1 {
     text-indent: -9999px;
     overflow: hidden;
     display: inline-block;
-
 }
 
 
 /* NAV */
 
 nav {
-
     width: 900px;
     display: inline-block;
-    vertical-align: bottom;
-
 }
 
 nav ul {
-    /* text-align: left;
-     */
     display: block;
-    /* list-style-type: disc; */
-    /* margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px; */
-
-
 }
 
 nav ul li {
     width: 100px;
     list-style: none;
-
     display: inline-block;
     margin: 1.2rem;
-
-
-
 }
 
 nav ul li a {
@@ -95,20 +61,74 @@ nav ul li a {
     font-size: 1.5rem;
     font-weight: 100;
     display: block;
-
     line-height: 3rem;
     text-align: center;
-
-    /* padding-bottom: 3rem; */
 }
 
-nav ul li a:hover {
-    color: #FFCC02;
-    text-decoration: underline;
+.animacionsubrayado {
+    position: relative;
 }
+
+.animacionsubrayado::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FFCC02;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.animacionsubrayado:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+.sesion {
+    background-image: url(../imagenes/sesion.png );
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.buscar {
+    background-image: url(../imagenes/buscar.png );
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+/* INDEX */
+
+#contenedorindex {
+    width: 1300px;
+    background-image: url(../imagenes/fondoindex.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+}
+
+em {
+    font-weight: bold;
+}
+
+strong {
+    font-size: 2rem;
+}
+
+
 
 .bannerindex {
-    background-image: url(/imagenes/bannerindex.jpg);
+    background-image: url(../imagenes/bannerindex.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -124,8 +144,7 @@ nav ul li a:hover {
 
 .bannerindexcontenedor h2 {
     margin-bottom: 4rem;
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 3.5rem;
     color: #1C3661;
 }
 
@@ -145,10 +164,7 @@ nav ul li a:hover {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
     padding: 1rem;
     display: inline-block;
-    /* overflow: hidden; */
     margin-bottom: 2rem;
-
-
 }
 
 .informacioncontenedorizquierda {
@@ -157,10 +173,7 @@ nav ul li a:hover {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
     padding: 1rem;
     display: inline-block;
-    /* overflow: hidden; */
     margin-bottom: 2rem;
-
-
 }
 
 .informaciontexto {
@@ -169,12 +182,10 @@ nav ul li a:hover {
     color: #1C3661;
     margin-left: 3rem;
     margin-top: 2rem;
-
 }
 
 .informaciontexto h3 {
     font-size: 1.8rem;
-
 }
 
 .informaciontextoizquierda {
@@ -183,12 +194,10 @@ nav ul li a:hover {
     color: #1C3661;
     margin-right: 3rem;
     margin-top: 2rem;
-
 }
 
 .informaciontextoizquierda h3 {
     font-size: 1.8rem;
-
 }
 
 .informacioncontenedor img {
@@ -206,21 +215,18 @@ nav ul li a:hover {
 }
 
 .blog {
-
     background: rgba(28, 54, 97, 0.5);
     padding: 1rem;
-    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); */
 }
 
 .desplazamiento {
     overflow: auto;
     white-space: nowrap;
     padding: 14px;
-    /* color: white; */
-    /* text-align: center; */
+}
 
-    /* text-decoration: none; */
-
+.blog article p {
+    height: 50%;
 }
 
 .desplazamiento article {
@@ -228,7 +234,6 @@ nav ul li a:hover {
     color: #1C3661;
     text-align: center;
     padding: 14px;
-    text-decoration: none;
     width: 20rem;
     margin: 1rem;
     padding: 1rem;
@@ -237,27 +242,12 @@ nav ul li a:hover {
     border-radius: 1rem;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
     overflow: auto;
-    white-space: wrap;
+    white-space: normal;
 }
-
-
-
-/* .desplazamiento article {
-    width: 20rem;
-    margin: 1rem;
-    padding: 1rem;
-    height: 30rem;
-    background: rgba(204, 203, 203, 0.9);
-    border-radius: 1rem;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-    overflow: auto;
-    white-space: wrap;
-} */
 
 .desplazamiento article:hover {
     background-color: rgba(255, 204, 2, 0.8);
 }
-
 
 .desplazamiento article a {
     text-decoration: none;
@@ -266,10 +256,7 @@ nav ul li a:hover {
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
     border-radius: 1rem;
     padding: 0.5rem;
-
-
 }
-
 
 .desplazamiento article a:hover {
     text-decoration: none;
@@ -289,14 +276,17 @@ nav ul li a:hover {
 .desplazamiento h3 {
     padding-bottom: 2rem;
     font-size: 1rem;
-
 }
 
 .blog h2 {
     text-align: center;
     color: #CCCBCB;
     font-size: 1.8rem;
+}
 
+.desplazamiento article strong {
+    font-size: 0.9rem;
+    text-decoration: underline;
 }
 
 ::-webkit-scrollbar {
@@ -314,6 +304,12 @@ nav ul li a:hover {
 ::-webkit-scrollbar-thumb:hover {
     background: #1C3661;
 }
+
+
+
+
+
+/* FOOTER */
 
 .piedepagina {
     background: #1C3661;
@@ -335,10 +331,9 @@ nav ul li a:hover {
 }
 
 .derechos {
-
     padding: 1rem;
     display: inline-block;
-    margin-top: 3rem;
+    margin-top: 0.6rem;
     margin-right: 12rem;
     float: right;
     color: #CCCBCB;
@@ -358,126 +353,173 @@ a[href^="mailto:"]:hover {
     font-weight: bold;
 }
 
+
+/* NOSOTROS */
+
 #contenedornosotros {
     width: 1300px;
-    background-image: url(/imagenes/fondonosotros.jpg);
+    background-image: url(../imagenes/fondonosotros.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     margin: 0 auto;
-
 }
 
 
-.informacionnuestraempresa {
-    background: rgba(204, 203, 203, 0.8);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-    /* padding: 0.4rem; */
-    /* display: inline-block; */
-    margin-bottom: 5rem;
-    /* margin-right: 30rem; */
-    /* height: 23rem; */
-    float: left;
-    width: 60%;
-    /* vertical-align: top; */
-
+.bannernosotros {
+    background-image: url(../imagenes/bannernosotros.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 45rem;
+    margin-top: 1.5rem;
+    padding: 2.5rem;
 }
 
-.informaciontextonuestraempresa {
-    width: 40%;
-    display: inline-block;
-    color: #1C3661;
-    margin-left: 3rem;
-    margin-top: 0.5rem;
-
-
+.bannernosotros h2 {
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+    font-size: 3.5rem;
+    color: #CCCBCB;
 }
 
-
-.informacionnuestraempresa img {
-    float: right;
-    /* vertical-align: top; */
-    margin-right: 3rem;
-    border-radius: 8px;
+.bannernosotros p {
+    font-size: 1.5rem;
     margin-top: 4rem;
+    color: #CCCBCB;
+    width: 55%;
 }
-
-
-
-
 
 .nuestroequipoejecutivo {
-    background: rgba(204, 203, 203, 0.8);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-    /*  padding: 0.5rem; */
-    /* display: inline-block; */
-    /* margin-bottom: 2rem; */
-    /* margin-right: 30rem; */
-    /* height: 23rem; */
-    float: left;
-    width: 60%;
-
+    background: rgba(204, 204, 203, 0.9);
+    padding: 1.5rem;
+    width: 80%;
+    margin: 1.5rem auto 3rem auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-
 .nuestroequipoejecutivo h2 {
-    /* width: 40%; */
-    /* display: inline-block; */
+    text-align: center;
     color: #1C3661;
-    margin-left: 3rem;
-    margin-top: 2rem;
-
+    font-size: 3rem;
 }
 
 .nuestroequipoejecutivo p {
-    /* width: 40%; */
-    /* display: inline-block; */
     color: #1C3661;
-    margin-left: 3rem;
-    margin-right: 3rem;
-    margin-top: 2rem;
-    font-size: larger;
-
+    font-size: 1.5rem;
+    width: 60%;
+    text-align: center;
+    margin: 1.5rem auto 1.5rem auto;
 }
 
+.empresario {
+    text-align: center;
+}
 
+.empresario figcaption {
+    color: #1C3661;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
 
+.empresario img {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 4rem;
+}
 
+.empresario a {
+    text-decoration: none;
+    color: #1C3661;
+    border: 1px solid;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+    padding: 0.5rem;
+}
+
+.empresario a:hover {
+    text-decoration: none;
+    color: #CCCBCB;
+    background: #1C3661;
+    border: 1px solid #1C3661;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
 
 .premios {
-    background: rgba(204, 203, 203, 0.8);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-    padding: 0.5rem;
+    background-color: white;
+    padding: 1rem;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 14px;
+    margin-top: 1rem;
+    border: 10px solid #1C3661;
+}
+
+.premios div {
     display: inline-block;
-    margin-bottom: 2rem;
-    /* margin-right: 30rem; */
-    /* height: 23rem; */
-    float: right;
-    vertical-align: top;
-    width: 25%;
-    z-index: 1;
-
+    margin: 2rem;
+    text-align: center;
+    padding: 1rem;
 }
 
-footer {
-    clear: both;
+.premios p {
+    color: #1C3661;
+    font-size: 1.5rem;
 }
 
-#contenedortienda {
-    width: 1300px;
-    background-image: url(/imagenes/fondotienda.jpg);
+.premios h2 {
+    color: #1C3661;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+
+/* BANNER PUBLICIDAD */
+
+.imagenespublicidad {
+    width: 81.25rem;
+    /* 1300px / 16px = 81.25rem */
+    height: 35.25rem;
+    /* 564px / 16px = 35.25rem */
+
+    animation: slide 40s infinite;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     margin: 0 auto;
+}
 
+@keyframes slide {
+    0% {
+        background-image: url(../imagenes/bannerlapicera.jpg);
+    }
+
+    40% {
+        background-image: url(../imagenes/bannerpulsera.jpg);
+    }
+
+    75% {
+        background-image: url(../imagenes/bannerreloj.jpg);
+    }
+
+    100% {
+        background-image: url(../imagenes/bannertaza.jpg);
+    }
+}
+
+/* TIENDA */
+
+#contenedortienda {
+    width: 1300px;
+    background-image: url(../imagenes/fondotienda.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
 }
 
 .bannertienda {
-    background-image: url(/imagenes/bannertienda.jpg);
+    background-image: url(../imagenes/bannertienda.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -493,8 +535,7 @@ footer {
 
 .bannertiendacontenedor h2 {
     margin-bottom: 4rem;
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 3.5rem;
     color: #1C3661;
 }
 
@@ -505,7 +546,6 @@ footer {
 }
 
 .productosindividuales {
-
     background: rgba(28, 54, 97, 0.5);
     padding: 1rem;
     overflow: auto;
@@ -513,15 +553,6 @@ footer {
     padding: 14px;
     margin-top: 1rem;
 }
-
-.productoscombo {
-
-    background: rgba(204, 204, 203, 0.9);
-    padding: 1rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
 
 .productosindividuales div {
     display: inline-block;
@@ -537,33 +568,15 @@ footer {
     border-radius: 1rem;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
     overflow: auto;
-    white-space: wrap;
+    white-space: normal;
 }
 
 .productosindividuales div:hover {
     background: rgba(255, 204, 2, 0.8);
 }
 
-.productoscombo div {
-    display: inline-block;
-    color: #CCCBCB;
-    text-align: center;
-    padding: 14px;
-    /* text-decoration: none; */
-    width: 20rem;
-    margin: 3.1rem;
-    padding: 2rem;
-    height: 30rem;
-    background: rgba(28, 54, 97, 0.5);
-    border-radius: 1rem;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-    overflow: auto;
-    white-space: wrap;
-}
-
-.productoscombo div:hover {
-    background: rgba(255, 204, 2, 0.5);
-    color: #1C3661;
+.productosindividuales p {
+    height: 18%;
 }
 
 .productosindividuales div a {
@@ -573,10 +586,7 @@ footer {
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
     border-radius: 1rem;
     padding: 0.5rem;
-
-
 }
-
 
 .productosindividuales div a:hover {
     text-decoration: none;
@@ -587,17 +597,54 @@ footer {
     padding: 0.5rem;
 }
 
+.productosindividuales div p {
+    text-align: start;
+    margin: 2rem;
+    font-size: 0.9rem;
+}
+
+.productosindividuales h2 {
+    text-align: center;
+    color: aliceblue;
+    font-size: 2rem;
+}
+
+
+.productoscombo {
+    background: rgba(204, 204, 203, 0.9);
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.productoscombo div {
+    display: inline-block;
+    color: #CCCBCB;
+    text-align: center;
+    padding: 14px;
+    width: 20rem;
+    margin: 3.1rem;
+    padding: 2rem;
+    height: 30rem;
+    background: rgba(28, 54, 97, 0.5);
+    border-radius: 1rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    white-space: normal;
+}
+
+.productoscombo div:hover {
+    background: rgba(28, 54, 97, 0.7);
+}
+
 .productoscombo div a {
     text-decoration: none;
-    color:#1C3661;
+    color: #1C3661;
     border: 1px solid;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
     border-radius: 1rem;
     padding: 0.5rem;
-
-
 }
-
 
 .productoscombo div a:hover {
     text-decoration: none;
@@ -608,15 +655,9 @@ footer {
     padding: 0.5rem;
 }
 
-.productosindividuales div p {
-    text-align: start;
-    margin: 2rem 2rem;
-    font-size: 0.9rem;
-}
-
 .productoscombo div p {
     text-align: start;
-    margin: 2rem 2rem;
+    margin: 2rem;
     font-size: 0.9rem;
 }
 
@@ -625,39 +666,26 @@ footer {
     font-size: 0.9rem;
 }
 
-.productosindividuales h2 {
-    text-align: center;
-    color:aliceblue;
-    font-size: 2rem;
-
-}
-
 .productoscombo h2 {
     text-align: center;
-    color:#1C3661;
+    color: #1C3661;
     font-size: 2rem;
-
 }
 
-#contenedorcontacto  {
+/* CONTACTO */
+
+#contenedorcontacto {
     width: 1300px;
-    background-image: url(/imagenes/fondocontacto.jpeg);
+    background-image: url(../imagenes/fondocontacto.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    /* opacity: 0.5; */
     margin: 0 auto;
-    
-
 }
 
 .contacto {
-
     background: rgba(28, 54, 97, 0.5);
     padding: 1rem;
-    overflow: auto;
-    white-space: nowrap;
-    padding: 14px;
     margin-top: 1rem;
 }
 
@@ -665,37 +693,91 @@ footer {
     display: inline-block;
     color: #1C3661;
     text-align: center;
-    padding: 14px;
     text-decoration: none;
     width: 28rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
     margin-left: 8rem;
-    /* padding: 1rem; */
+    padding: 1rem;
     height: 35rem;
     background: rgba(204, 203, 203, 0.8);
     border-radius: 0.2rem;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-    overflow: auto;
-    white-space: wrap;
-}
+    }
 
 .contacto p {
-   /*  text-align: left; */
     margin: 1rem;
-    
     font-size: 0.9rem;
-display: inline-block;}
+    display: inline-block;
+}
 
-
-
-
-.contacto img {border-radius: 0.5rem;
+.contacto img {
+    border-radius: 0.5rem;
 }
 
 .contacto div:hover {
     background: rgba(204, 203, 203, 1);
-   
+}
+
+.contacto a[href^="mailto:"] {
+    color: #1C3661;
+}
+
+.formulario {
+    background: rgba(204, 203, 203, 0.9);
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #1C3661;
+}
+
+.formulario ul li {
+    list-style: none;
+    background-color: #FFCC02;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    width: 40rem;
+    border-radius: 0.2rem;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.formulario ul {
+    display: inline-block;
+    padding-inline-start: 0px;
+}
+
+.formulario ul li a {
+    text-decoration: none;
+    color: #1C3661;
+}
+
+.mensaje {
+    height: 8rem;
+}
+
+.enviar {
+    background-color: #1C3661;
+    color: #CCCBCB;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    width: 40rem;
+    border-radius: 0.2rem;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.enviar:hover {
+    background-color: #FFCC02;
+    color: #1C3661;
+}
+
+.formulario h2 {
+    font-size: 2rem;
+}
+
+.formulario p {
+    font-size: 1.3rem;
 }
 
 .mapa {
@@ -705,42 +787,22 @@ display: inline-block;}
     text-align: center;
 }
 
-.mapa img { margin-top: 2rem;
-    /* margin-bottom: 2rem */;}
+.mapa img {
+    margin-top: 2rem;
+}
 
-.mapa iframe { 
-    margin-bottom: 2rem;}  
-    
-    .mapa h2 { font-size: 3rem;
-    color:#CCCBCB; padding: 0.2rem;
+.mapa iframe {
+    margin-bottom: 2rem;
+}
+
+.mapa h2 {
+    font-size: 3rem;
+    color: #CCCBCB;
+    padding: 0.2rem;
     margin: 0.7rem;
 }
 
-    .mapa p { font-size: large;
-    color:#CCCBCB}
-
-
-    .formulario {
-        background: rgba(204, 203, 203, 0.8);
-        padding: 1rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        text-align: center;
-        color: #1C3661;
-    }
-
-    .formulario ul li{
-        list-style: none;
-        background-color: #FFCC02;
-        padding: 0.5rem;
-        margin: 0.5rem;
-        width: 40rem;
-        
-    }
-
-    .formulario ul{
-        display: inline-block;
-        
-    }
-
-    
+.mapa p {
+    font-size: large;
+    color: #CCCBCB
+}

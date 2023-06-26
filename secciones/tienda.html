@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>Tienda - Backsee</title>
-    <link rel="stylesheet" href="/estilos/normalize.css" />
-    <link rel="stylesheet" href="/estilos/styles.css" />
+    <link rel="stylesheet" href="../estilos/normalize.css">
+    <link rel="stylesheet" href="../estilos/styles.css">
   </head>
 
   <body>
@@ -14,12 +14,14 @@
 
         <nav>
           <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="#">Tienda</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="#">Sesión</a></li>
-            <li><a href="#">Búsqueda</a></li>
+            <li><a class="animacionsubrayado" href="../index.html">Inicio</a></li>
+            <li><a class="animacionsubrayado" href="nosotros.html">Nosotros</a></li>
+            <li><a class="animacionsubrayado" href="#">Tienda</a></li>
+            <li><a class="animacionsubrayado" href="contacto.html">Contacto</a></li>
+            <li>
+              <a class="sesion" href="#" title="Iniciar sesion">Sesión</a>
+            </li>
+            <li><a class="buscar" href="#" title="Buscar">Búsqueda</a></li>
           </ul>
         </nav>
       </header>
@@ -33,24 +35,23 @@
               seguridad perfecta para ti.
             </p>
             <p>¡No esperes más para salvaguardar tus datos y sistemas!</p>
-            <p>Proteje lo que es tuyo</p>
+            <p><strong>Proteje lo que es tuyo</strong></p>
           </div>
         </section>
 
         <section class="productosindividuales">
-          <h2>Individuales</h2>
+          <h2>INDIVIDUALES</h2>
 
           <div>
             <img
               src="../imagenes/firewall.jpg"
               width="200"
               height="100"
-              alt="firewall"
-            />
+              alt="firewall">
             <h3>Firewall de red</h3>
             <p>
-              Protege las redes empresariales contra intrusiones no autorizadas
-              y filtrar el tráfico entrante y saliente
+              <em>Protege</em> las redes empresariales contra intrusiones no autorizadas
+              y <em>filtra</em> el tráfico entrante y saliente
             </p>
             <p>Precio:$1500 ARS/año</p>
             <a href="#">Comprar</a>
@@ -61,11 +62,10 @@
               src="../imagenes/redprivadavirtual.jpg"
               width="200"
               height="100"
-              alt="red privada virtual"
-            />
+              alt="red privada virtual">
             <h3>Red Privada Virtual</h3>
             <p>
-              Asegurar las comunicaciones en línea y garantizar la privacidad y
+              <em>Asegurar</em> las comunicaciones en línea y <em>garantizar</em> la privacidad y
               la protección de los datos mientras se navega por Internet.
             </p>
             <p>Precio: $2000 ARS/año</p>
@@ -74,15 +74,14 @@
 
           <div>
             <img
-              src="../imagenes/copiadeseguridad.jpg"
+              src="../imagenes/seguridadenlanube.jpg"
               width="200"
               height="100"
-              alt="copia de seguridad"
-            />
-            <h3>Copia de seguridad y recuperación de datos</h3>
+              alt="copia de seguridad">
+            <h3>Copia de seguridad </h3>
             <p>
-              Soluciones de copia de seguridad automatizadas y herramientas de
-              recuperación de datos para proteger y restaurar información en
+              Soluciones de <em>copia de seguridad automatizadas</em> y herramientas de
+              <em>recuperación de datos</em> para proteger y restaurar información en
               caso de pérdida o corrupción.
             </p>
             <p>Precio: $2000 ARS/año</p>
@@ -94,11 +93,10 @@
               src="../imagenes/backupnube.jpg"
               width="200"
               height="100"
-              alt="respaldo nube"
-            />
+              alt="respaldo nube">
             <h3>Backup en la nube</h3>
             <p>
-              Almacenamiento de datos seguro y confiable en la nube,
+              Almacenamiento de datos <em>seguro y confiable</em> en la nube,
               garantizando la protección de tus archivos más valiosos.
             </p>
             <p>Precio: $2000 ARS/año</p>
@@ -107,15 +105,14 @@
         </section>
 
         <section class="productoscombo">
-          <h2>Packs</h2>
+          <h2>COMBOS</h2>
 
           <div>
             <img
               src="../imagenes/standard.png"
               width="75"
               height="75"
-              alt="producto standard"
-            />
+              alt="producto standard">
             <h3>Standard</h3>
             <ul>
               <li>Protección antivirus</li>
@@ -130,8 +127,7 @@
               src="../imagenes/premium.png"
               width="75"
               height="75"
-              alt="producto premium"
-            />
+              alt="producto premium">
             <h3>Premium</h3>
             <ul>
               <li>Protección antivirus</li>
@@ -148,8 +144,7 @@
               src="../imagenes/platinum.png"
               width="75"
               height="75"
-              alt="producto platinum"
-            />
+              alt="producto platinum">
             <h3>Platinum</h3>
             <ul>
               <li>Protección antivirus</li>
@@ -165,7 +160,13 @@
             <a href="#">Comprar</a>
           </div>
         </section>
+
+        
+          <div class="imagenespublicidad"></div>
+        
       </main>
+
+      
 
       <footer class="piedepagina">
         <div class="datosalumna">
@@ -180,6 +181,7 @@
           </ul>
         </div>
         <div class="derechos">
+          <img src="../imagenes/logofooter.png" width="115" height="68" alt="logo backsee">
           <p>Backsee SA. Todos los derechos reservados.®</p>
           <p>
             Realizado por:
