@@ -306,7 +306,60 @@ strong {
 }
 
 
+/* BANNER INDEX */
 
+#carruselindex {
+    width: 1300px ;
+    margin: 10px auto ;
+    line-height: 0 ;
+    overflow: hidden ;
+    display: inline-block ;
+    vertical-align: middle ;
+}
+
+#carruselindex ul {
+    padding: 0 ;
+    margin: 0 ;
+    list-style: none ;
+    width: 400%;
+    position: relative;
+    animation: carrusel 20s ease infinite ;
+}
+
+#carruselindex ul li {
+    display: inline-block;
+    width: 25%;
+}
+
+@keyframes carrusel {
+    0% {
+        margin-left: 0;
+    }
+    20% {
+        margin-left: 0;
+    }
+    25% {
+        margin-left: -100%;
+    }
+    45% {
+        margin-left: -100%;
+    }
+    50% {
+        margin-left: -200%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    75% {
+        margin-left: -300%;
+    }
+    95% {
+        margin-left: -300%;
+    }
+    100% {
+        margin-left: 0%;
+    }
+}
 
 
 /* FOOTER */
@@ -474,38 +527,63 @@ a[href^="mailto:"]:hover {
 }
 
 
+
 /* BANNER PUBLICIDAD */
 
-.imagenespublicidad {
-    width: 81.25rem;
-    /* 1300px / 16px = 81.25rem */
-    height: 35.25rem;
-    /* 564px / 16px = 35.25rem */
-
-    animation: slide 40s infinite;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 0 auto;
+#carrusel {
+    width: 1300px ;
+    margin: 10px auto ;
+    line-height: 0 ;
+    overflow: hidden ;
+    display: inline-block ;
+    vertical-align: middle ;
 }
 
-@keyframes slide {
+#carrusel ul {
+    padding: 0 ;
+    margin: 0 ;
+    list-style: none ;
+    width: 400%;
+    position: relative;
+    animation: carrusel 20s ease infinite ;
+}
+
+#carrusel ul li {
+    display: inline-block;
+    width: 25%;
+}
+
+@keyframes carrusel {
     0% {
-        background-image: url(../imagenes/bannerlapicera.jpg);
+        margin-left: 0;
     }
-
-    40% {
-        background-image: url(../imagenes/bannerpulsera.jpg);
+    20% {
+        margin-left: 0;
     }
-
+    25% {
+        margin-left: -100%;
+    }
+    45% {
+        margin-left: -100%;
+    }
+    50% {
+        margin-left: -200%;
+    }
+    70% {
+        margin-left: -200%;
+    }
     75% {
-        background-image: url(../imagenes/bannerreloj.jpg);
+        margin-left: -300%;
     }
-
+    95% {
+        margin-left: -300%;
+    }
     100% {
-        background-image: url(../imagenes/bannertaza.jpg);
+        margin-left: 0%;
     }
 }
+
+
 
 /* TIENDA */
 
